@@ -72,8 +72,8 @@ For a thorough explanation of the program's output please refer to the whitepape
 * **I really like the auto detection/eviction set generation/eviction strategy/< insert any part here >. Can I use it in my own project?**
 
    Yes, all parts of CJAG are open source and you are free to use it in your projects. 
-   
-* **I get "*[ERROR] Could not retrieve cache sets, please try to restart"* **
+
+* **I get "*[ERROR] Could not retrieve cache sets, please try to restart*" **
 
    Most likely some cache parameters are wrong. Maybe the auto detection did not work (happens on virtual machines) or you messed up some numbers. Check the specifications of your **host** CPU and try again.
    
