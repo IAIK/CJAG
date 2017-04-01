@@ -11,10 +11,12 @@ typedef enum {
     ERROR_INVALID_WAYS,
     ERROR_MISSING_OPTION,
     ERROR_INVALID_SPEED,
-    ERROR_TIMEOUT_TOO_LOW
+    ERROR_TIMEOUT_TOO_LOW,
+    ERROR_INVALID_PARAMETERS
 } error_code_t;
 
 #define ERROR_ON(condition, error_code, color) do { if(condition) return show_error(error_code, color); } while(0)
+#define ABORT_ON(condition, error_code, color) do { if(condition) exit(show_error(error_code, color)); } while(0)
 
 int show_error(error_code_t e, int color);
 

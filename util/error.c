@@ -44,6 +44,10 @@ int show_error(error_code_t e, int color) {
             printf_color(color, ERROR_TAG "[y]Timeout[/y] must be at least [y]2[/y] seconds!\n");
             break;
 
+        case ERROR_INVALID_PARAMETERS:
+            printf_color(color, ERROR_TAG "The combination of [y]parameters[/y] is [y]invalid[/y]\n");
+            break;
+
         default:
             printf_color(color, ERROR_TAG "An [r]unknown[/r] error occurred\n");
             break;

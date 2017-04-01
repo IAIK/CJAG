@@ -7,6 +7,7 @@
 #include "../cache/set.h"
 #include "../cache/slice.h"
 #include "../util/timing.h"
+#include "../util/error.h"
 
 #define MIN(x, y) ((x) < (y) ? (x) : (y))
 
@@ -148,10 +149,14 @@ jag_check_set(volatile uint8_t **s_addrs, uint32_t target_misses, uint32_t read_
     uint32_t hits = 0, misses = 0, reads = 0;
     size_t time, delta;
     int window_index = 0, max_misses = 0;
+    int i;
 
     memset(hit, 0, sizeof(hit));
     memset(miss, 0, sizeof(miss));
 
+    for(i = 0; i <= config->cache_kill_count; i++) {
+        ABORT_ON((ssize_t)s_addrs[i] <= 0, ERROR_INVALID_PARAMETERS, config->color_output);
+    }
     evict_set(s_addrs, config->cache_kill_count);
 
     while (reads < read_timeout) //if the sender isn't active this could run forever otherwise
