@@ -5,7 +5,7 @@ The CJAG implementation can be used to establish a cross-VM cache covert channel
 
 A thorough description can be found in our whitepaper
  
- * [CJAG: Cache-based Jamming Agreement](https://www.blackhat.com/asia-17/briefings/schedule/index.html#hello-from-the-other-side-ssh-over-robust-cache-covert-channels-in-the-cloud-5376) (Michael Schwarz, Manuel Weber)
+ * [CJAG: Cache-based Jamming Agreement](https://www.blackhat.com/docs/asia-17/materials/asia-17-Schwarz-Hello-From-The-Other-Side-SSH-Over-Robust-Cache-Covert-Channels-In-The-Cloud-wp.pdf) (Michael Schwarz, Manuel Weber)
 
 A cache-based, robust covert channel based on CJAG can be found in our NDSS'17 paper
 
