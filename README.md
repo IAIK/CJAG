@@ -25,7 +25,7 @@ CJAG consists of multiple C files. There is no dependency on any external librar
 * gcc
 * make
 
-On Ubuntu, they can be installed using the packet manager:
+On Ubuntu, they can be installed using the package manager:
 
     sudo apt-get install gcc make
     
